@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
+        android:id="@+id/card1"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+        <LinearLayout
+            android:layout_margin="3dp"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Deaths"/>/
+
+                <TextView
+                    android:id="@+id/todaydathid"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:background="@drawable/round"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:layout_width="111dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Deaths"/>/
+
+                <TextView
+                    android:id="@+id/totaldathid"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:background="@drawable/round"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="111dp"
+                    android:layout_height="match_parent"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Recovered"/>/
+
+                <TextView
+                    android:id="@+id/todayRecoveredid"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:background="@drawable/round"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:layout_width="111dp"
+                    android:layout_height="match_parent"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_above="@+id/bottomnavid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card1"
+        android:layout_margin="15dp"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Covid-19 Bangladeshi News"
+                android:layout_margin="11dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium"
+                />
+             <view
+                 android:layout_marginTop="5dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Total Cases :"/>
+
+                 <TextView
+                     android:id="@+id/total_cases_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Today Cases :"/>
+
+                 <TextView
+                     android:id="@+id/today_cases_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Total Deaths :"/>
+
+                 <TextView
+                     android:id="@+id/total_death_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Today Deaths :"/>
+
+                 <TextView
+                     android:id="@+id/today_death_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Recovered :"/>
+
+                 <TextView
+                     android:id="@+id/recovered_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Critical :"/>
+
+                 <TextView
+                     android:id="@+id/critical_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:textColor="#000"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Active :"/>
+
+                 <TextView
+                     android:id="@+id/activ_homeid"
+                     android:gravity="right"
+                     android:paddingRight="11dp"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:layout_marginTop="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="0"/>
+
+
+
+             </LinearLayout>
+
+             <view
+
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:background="#000"
+                 android:layout_height="3dp"/>
+
+
+         </LinearLayout>
+
+
+     </ScrollView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:layout_width="match_parent"
+    android:id="@+id/bottomnavid"
+    app:menu="@menu/menu"
+    android:background="#EC0D0D"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
